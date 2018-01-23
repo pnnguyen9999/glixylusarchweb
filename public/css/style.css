@@ -1,0 +1,44 @@
+.l1:hover {
+		/*background-color: #111111 !important;*/
+		opacity: 1 !important;	
+		transition: opacity 0.5s;
+	}
+	.l1 {
+		transition: opacity 0.4s ease-in-out; 
+	}
+	
+	a:focus {
+		color: inherit;
+	}
+	a:hover {
+		color: inherit;
+	}
+	.tipl:hover{
+		opacity: 1 !important;	
+		transition: opacity 0.2s;
+	}
+	.tipl {
+		transition: opacity 0.5s ease-in-out; 
+	}
+@font-face {
+    font-family: 'font1';
+    src: url('/font/SourceSansPro-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'font2';
+    src: url('/font/SourceSansPro-Light.ttf');
+}
+@font-face {
+    font-family: 'font3';
+    src: url('/font/SourceSansPro-Regular.ttf');
+}
+
+.tiphome{
+	opacity: 0.8;
+	height: 50px;
+	background-color: rgba(45,45,45,0.8);
+	text-align: center;
+	border-radius:0px 0px 5px 0px;
+	cursor: pointer;
+	border-bottom: 5px solid #555555;
+}
