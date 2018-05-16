@@ -10,12 +10,16 @@ use Illuminate\Support\Facades\DB;
 
 class store extends Controller
 {
-
-	public function test(Request $request){
+	function test(Request $request){
 	    if($request->ajax()){
 	        $productID = $_GET['productID'];
-			return "xin chào ".$productID;
+	        $data['dataItem'] = DB::table('store')->where('id', $productID)->get();
+			return view('container/detail',$data);
 	    }
+	}
+	function storeLoad() {
+		  $data['data'] = DB::table('store')->orderBy('id', 'asc')->get();
+			return view('product',$data);
 	}
 	
 }

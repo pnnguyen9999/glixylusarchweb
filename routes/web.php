@@ -10,20 +10,21 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// LOAD TRANG CHỦ
 Route::get('/', 'adminsv@homeLoad');
-Route::get('/product', function () {
-    return view('product');
-});
-Route::get('/art/{art}', 'adminsv@artLoad');
-Route::get('/admin', 'adminsv@getData');
-/*Route::get('/admin', function () {
-    return view('login');
-});*/
-Route::post('/login', 'adminsv@login');
+//--------------------------------------
+// LOAD TRANG ADMIN UPLOAD SLIDE VÀ MODIFY SLIDE
+Route::get('/modhome', 'adminsv@getData');
 Route::post('/upload', 'adminsv@upload');
 Route::post('/modify', 'adminsv@rmData');
-Route::get('/ajax',function(){
-   return view('testajax');
+//--------------------------------------
+// LOAD VÀO TRANG ADMIN
+Route::get('/admin',function(){
+   return view('adminDash/adminDashboard');
 });
-Route::get('/getRequest', 'store@test');
+//--------------------------------------
+// LOAD VÀO GALLERY KIẾN TRÚC
+Route::get('/galleryKT',function(){
+   return view('galleryKT');
+});
+//--------------------------------------
